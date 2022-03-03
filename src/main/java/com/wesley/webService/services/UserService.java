@@ -29,9 +29,9 @@ public class UserService {
 //		Optional<User> obj = repository.findById(id);
 //		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 //	}
-	public User findByLastnameOrFirstname(String name, String password) {
-		Optional<User> obj = repository.findByLastnameOrFirstname(name, password);
-		return obj.orElseThrow(() -> new ResourceNotFoundException(name));
+	public User findByNameAndPassword(String name, String password) {
+		return  repository.findByNameAndPassword(name, password);
+
 	}
 
 	public User insert(User obj) {
