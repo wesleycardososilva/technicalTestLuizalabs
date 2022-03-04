@@ -36,6 +36,7 @@ public class UserResource {
 //		User obj = service.findById(id);
 //		return ResponseEntity.ok().body(obj);
 //	}
+
 	@GetMapping(value= "/{name}/{password}")
 	public ResponseEntity<User> findByNameAndPassword(@PathVariable String name, @PathVariable String password ){
 		User obj = service.findByNameAndPassword(name,password);
